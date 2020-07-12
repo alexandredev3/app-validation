@@ -57,7 +57,7 @@
   animation-fill-mode: forwards;
 }
 
-.active {
+.actived {
   animation-name: moveForward;
   animation-duration: 200ms;
   animation-fill-mode: forwards;
@@ -178,6 +178,6 @@ input:valid ~ label {
 }
 
 .input span.error.active {
-  color: red;
+  color: #ff5858;
   padding: 4px;
 }

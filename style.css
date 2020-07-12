@@ -14,6 +14,55 @@
   box-sizing: border-box;
 }
 
+@keyframes moveForward {
+  from {
+    transform: translateX(-300px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes moveBackward {
+  from {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-300px);
+    opacity: 0;
+  }
+}
+
+.box-message {
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+
+  margin: 20px 20px;
+  padding: 14px;
+
+  border-radius: 5px;
+
+  width: 24%;
+  height: 100px;
+  background: var(--primary-color);
+}
+
+.desability {
+  animation-name: moveBackward;
+  animation-duration: 200ms;
+  animation-fill-mode: forwards;
+}
+
+.active {
+  animation-name: moveForward;
+  animation-duration: 200ms;
+  animation-fill-mode: forwards;
+}
+
 html {
   font-family: 'Roboto', sans-serif;
   height: 100%;
@@ -119,6 +168,7 @@ input:valid ~ label {
 /*
   input:valid ->  Quando o campo for valido, tiver escrito alguma coisa no input ele vai aplicar
   esse estilo.
+  * Para aplicar essa estrategia o input precisa ter o atributo required.
 */
 
 .input span.error {

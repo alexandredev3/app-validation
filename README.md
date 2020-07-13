@@ -17,7 +17,7 @@
  </p>
 
 <h1>
-  <img src="https://github.com/alexandredev3/app-validation/blob/master/app-design.png"/>
+  <img src="https://github.com/alexandredev3/app-validation/blob/master/app-image.png"/>
 </h1>
 
 ## :computer: Languages

@@ -8,13 +8,14 @@
 
   <link rel="stylesheet" href="./style.css">
 
-  <script src="./script.js" defer ></script>
+  <script src="./main.js" defer ></script>
+  <script src="./validate.js" defer ></script>
 </head>
 
 <body>
 
-  <div class="box-message desability">
-    <strong>Message:</strong>
+  <div class="box-message">
+    <strong>Mensagem:</strong>
     <span>Formulário enviado com sucesso!</span>
   </div>
 
@@ -30,19 +31,24 @@
         type="text" 
       />
       <label>Nome</label>
-      <span class="error"></span>
+      <span class="error">
+      </span>
     </div>
 
     <div class="input">
       <input 
         required 
-        type="email" 
+        id="email"
+        type="email"
       />
       <label>Email</label>
-      <span class="error"></span>
+      <span class="error">
+      </span>
     </div>
 
-    <button type="submit">Enviar</button>
+    <button type="submit">
+      Enviar
+    </button>
 
   </form>
 

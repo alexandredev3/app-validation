@@ -4,7 +4,7 @@
   --primary-color: #08ca79;
   --bg-color: #F4F4FB;
   --text-color: #353640;
-  --input-color: hsla(235, 9%, 23%, 0.25);
+  --input-color: rgba(53, 54, 64, 0.25);
   --light-color: rgba(255, 255, 255, 0.04);
 }
 
@@ -24,7 +24,7 @@
     opacity: 1;
   }
 }
-@keyframes moveBackward {
+/* @keyframes moveBackward {
   from {
     transform: translateX(0px);
     opacity: 1;
@@ -33,31 +33,32 @@
     transform: translateX(-300px);
     opacity: 0;
   }
-}
+} */
 
 .box-message {
+  z-index: 9999;
   position: absolute;
+  visibility: hidden;
 
   display: flex;
   flex-direction: column;
+
+  font-size: 18px;
 
   margin: 20px 20px;
   padding: 14px;
 
   border-radius: 5px;
 
-  width: 24%;
+  max-width: 320px;
+  width: 100%;
   height: 100px;
   background: var(--primary-color);
 }
 
-.desability {
-  animation-name: moveBackward;
-  animation-duration: 200ms;
-  animation-fill-mode: forwards;
-}
-
 .actived {
+  visibility: visible;
+
   animation-name: moveForward;
   animation-duration: 200ms;
   animation-fill-mode: forwards;
@@ -87,6 +88,10 @@ form {
 
   display: flex;
   flex-direction: column;
+}
+
+form .error {
+  fill: #ff5858;
 }
 
 form h2 {
@@ -127,6 +132,10 @@ button {
 }
 
 button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   margin-top: 16px;
 
   border-radius: 5px;
